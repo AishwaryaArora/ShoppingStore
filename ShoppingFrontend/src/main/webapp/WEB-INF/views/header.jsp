@@ -41,12 +41,12 @@ body {margin:0}
 
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
 
 		
 
-<nav id="navbar-red" class="navbar navbar-inverse navbar-static-top" role="navigation">
+<nav id="navbar-red" class="navbar navbar-default navbar-static-top" role="navigation">
 <div class="container" id="iconbar">
 <ul class ="nav navbar-nav">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-nav">
@@ -68,6 +68,22 @@ body {margin:0}
 <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
 <li><a href="${contextRoot})register">Register</a>
 </ul>
+
+
+<form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
 
 </div>
 </body>
