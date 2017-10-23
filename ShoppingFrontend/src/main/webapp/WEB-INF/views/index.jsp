@@ -19,8 +19,8 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-  <h2 style="color:red"><strong><i><center>SHOPPING STORE</center></i></strong></h2>  
-<!--<jsp:include page="header.jsp"></jsp:include> -->
+<h2 align="left", style="color:red"><strong><i>SHOPPING STORE</i></strong></h2>  
+<%-- <jsp:include page="header.jsp"></jsp:include> --%>
 <div class="container">
 <!--  <h2 style="color:red"><i>Shopping Store</i></h2> -->
 

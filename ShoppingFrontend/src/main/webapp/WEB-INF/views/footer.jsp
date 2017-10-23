@@ -7,19 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
- <div class="container footer">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-20">
+ 
+    <br/><br/><br/>
+      
+      <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+                   <center>
                     <p>Copyright &copy; Shopping Store 2017 - Designed and Developed By Aishwarya Arora</p>
+                    </center>
                 </div>
-            </div>
-        </footer>
-
-    </div>
+        </div>
+        </div>
+     
 </body>
 </html>

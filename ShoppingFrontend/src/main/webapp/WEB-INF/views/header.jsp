@@ -41,12 +41,20 @@ body {margin:0}
 
 </head>
 <body>
-<nav class="navbar navbar-default">
+
+<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
+
+<div class="nav navbar">
+			<img class="navbar-brand"
+				src="<c:url value="/resources/logo.png"/>"
+			    href="<c:url value="/index"/>" width="200px" height="100px"
+				alt="logo-image"></img>
+		</div>
 
 		
 
-<nav id="navbar-red" class="navbar navbar-default navbar-static-top" role="navigation">
+<nav id="navbar-red" class="navbar navbar-inverse navbar-static-top" role="navigation">
 <div class="container" id="iconbar">
 <ul class ="nav navbar-nav">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-nav">
@@ -69,22 +77,19 @@ body {margin:0}
 <li><a href="${contextRoot})register">Register</a>
 </ul>
 
-
-<form class="navbar-form navbar-left">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-
-
-
-
-
-
-
-
-
 </div>
+
+<form class="navbar-form navbar-right">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+
+
 </body>
 </html>
