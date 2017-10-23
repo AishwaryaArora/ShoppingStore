@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.Dao.UserDao;
 import com.DaoImpl.UserDaoImpl;
 import com.model.Category;
+import com.model.Product;
 import com.model.User;
 
 
@@ -63,6 +64,7 @@ public class DBConfig {
 		sessionBuilder.addProperties(getHibernateProperties());
 		//sessionBuilder.scanPackages("com.hibernateConfig");
 		sessionBuilder.addAnnotatedClass(Category.class);
+		sessionBuilder.addAnnotatedClass(Product.class);
 		//sessionBuilder.addAnnotatedClass(User.class);
 		//@SuppressWarnings("deprecation")
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();
