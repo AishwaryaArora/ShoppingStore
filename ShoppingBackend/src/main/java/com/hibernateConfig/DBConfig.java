@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.Dao.UserDao;
 import com.DaoImpl.UserDaoImpl;
+import com.model.Category;
 import com.model.User;
 
 
@@ -28,7 +29,7 @@ public class DBConfig {
 	public DataSource getDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/ECOMMERCE");
+		dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
 		dataSource.setUsername("sa");
 		dataSource.setPassword("");
 		System.out.println("Connection Established");
@@ -56,14 +57,14 @@ public class DBConfig {
 	}
 	
 	@Bean(name = "sessionFactory")
-	public SessionFactory getSessionFactory(DataSource dataSource) 
+	public SessionFactory getSessionFactory() //DataSource dataSource
 	{
-		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
+		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(getDataSource());//dataSource
 		sessionBuilder.addProperties(getHibernateProperties());
-		sessionBuilder.scanPackages("com.niit");
-		//sessionBuilder.addAnnotatedClass(Category.class);
-		sessionBuilder.addAnnotatedClass(User.class);
-		@SuppressWarnings("deprecation")
+		//sessionBuilder.scanPackages("com.hibernateConfig");
+		sessionBuilder.addAnnotatedClass(Category.class);
+		//sessionBuilder.addAnnotatedClass(User.class);
+		//@SuppressWarnings("deprecation")
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();
 		System.out.println("Session Factory Object Created");
 		return sessionFactory;		
