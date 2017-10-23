@@ -19,13 +19,8 @@ import com.DaoImpl.UserDaoImpl;
 import com.model.User;
 
 
-
-
-
-
-
 @Configuration
-@ComponentScan("com.niit")
+@ComponentScan("com.hibernateConfig")
 @EnableTransactionManagement
 public class DBConfig {	
 	
