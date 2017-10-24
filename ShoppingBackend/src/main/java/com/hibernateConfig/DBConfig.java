@@ -51,10 +51,10 @@ public class DBConfig {
 	}
 	
 	@Autowired
-	@Bean(name="UserDAO")
-	public UserDao getUserData(SessionFactory sessionFac)
+	@Bean(name="userDao")
+	public UserDao getUserData(SessionFactory sessionFactory)
 	{
-		return new UserDaoImpl(sessionFac);
+		return new UserDaoImpl(sessionFactory);
 	}
 	
 	@Bean(name = "sessionFactory")

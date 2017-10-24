@@ -11,14 +11,16 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.Dao.UserDao;
+import com.model.Category;
 import com.model.User;
-@Repository("UserDao")
+@Repository("userDao")
 @Transactional
 public class UserDaoImpl implements UserDao {
 	
 	@Autowired
-	SessionFactory sessionFac;
-	public boolean insertUser(User user)
+	SessionFactory sessionFactory;
+	
+	/*public boolean insertUser(User user)
 	{
 		Session session=sessionFac.openSession();
 		session.beginTransaction();
@@ -26,7 +28,29 @@ public class UserDaoImpl implements UserDao {
 		session.getTransaction().commit();
 		return true;
 		
+	}*/
+	
+	@Transactional
+	public boolean insertUser(User user) 
+	{
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+		session.save(user);
+		return true;
+		}
+		catch(Exception e)
+		{
+		return false;
+		}
 	}
+	
+	
+	
+	
+	
+	
+	
 	public List<User> retrieveUser() {
 		// TODO Auto-generated method stub
 		return null;
@@ -48,7 +72,7 @@ public class UserDaoImpl implements UserDao {
 	public UserDaoImpl(SessionFactory sessionFactory)
 	{
 		super();
-		sessionFac=sessionFactory;
+		sessionFactory=sessionFactory;
 	}
 	
 	/*public List<User> retrieve()
