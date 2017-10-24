@@ -69,7 +69,7 @@ body {margin:0}
 <ul class="nav navbar-nav">
 <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
 <li><a href="#">Product</a>
-<li><a href="#">Category</a>
+<li><a href="category">Category</a>
 </ul>
 
 <ul class="nav navbar-nav navbar-right">

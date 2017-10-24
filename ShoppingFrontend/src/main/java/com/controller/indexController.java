@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.Dao.UserDao;
 import com.DaoImpl.UserDaoImpl;
 import com.model.User;
 
 @Controller
 public class indexController {
 
-	    @RequestMapping("/index")
+	    @RequestMapping("/")
 		public String index()
 		{
 			System.out.println("index working fine");
@@ -22,7 +23,8 @@ public class indexController {
 		}
 	   	   
 	   
-	    
+	    @Autowired
+	    UserDao userDao;
 	    @RequestMapping("/register")
 		public String goToregister()
 		{

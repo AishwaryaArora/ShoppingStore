@@ -36,7 +36,7 @@ static CategoryDao categoryDao;
 	public void addCategoryTest()
 	{
 		Category category=new Category();
-		category.setCatId(102);
+		category.setCatId(101);
 		category.setCatName("Desktop");
 		category.setCatDesc("all kinds of desktops ");
 		
@@ -80,7 +80,7 @@ static CategoryDao categoryDao;
 		}
 	}
 	
-	
+	@Ignore
 	@Test
 	public void getCategoryTest()
 	{
